@@ -2,6 +2,7 @@ import "./App.css";
 import { useState } from "react";
 import itemData from "./assets/item-data.json";
 import Item from "./components/Item";
+import Aggregator from "./components/Aggregator";
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
@@ -153,28 +154,8 @@ function App() {
         </div>
       </div>
 
-      <div class="cart">
-        <h2>Cart</h2>
-          {cost === 0 ? <p>Nothing in cart yet</p> : 
-          
-          <div>
-
-            {Array.from(cart.entries()).map((entry, index) => 
-            (entry[1] > 0 ?
-              <div class="itemListed" key={index}>
-                <p>{entry[1]} x {entry[0]}</p>
-              </div>
-            : 
-            <div></div> ))
-            
-            }
-            
-            <p><b>Total:</b> {cost}</p>
-          </div>
-          
-          }
+      <Aggregator cost={cost} cart={cart}></Aggregator>
       </div>
-    </div>
   );
 }
 

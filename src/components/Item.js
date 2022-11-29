@@ -1,4 +1,3 @@
-// TODO: create a component that displays a single bakery item
 import React from 'react';
 import "../App.css";
 
