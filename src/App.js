@@ -93,7 +93,7 @@ function App() {
     <div className="App">
 
       <div class="left">
-        <h1>Katie's Toy Store</h1>
+        <h1>Bruno's Toy Store</h1>
         <div class="inner-text">
           <div class="type">
             <h4>Filter by Type of Toy</h4>
